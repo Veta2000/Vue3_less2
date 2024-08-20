@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>less 2</title>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    
+        </head>
+    <body>
+ 
+        <div id="app">
+            
+            <p>Name: {{ state.name }}</p>
+            <p>Age: {{ state.age }}</p>
+        
+            
+            <button @click="fetchRandomName">Change Name</button>
+        
+            
+            <input @input="updateAge" placeholder="Введите новый возраст" />
+        
+            
+            <ul>
+              <li v-for="person in adults" :key="person.name">{{ person.name }} ({{ person.age }})</li>
+            </ul>
+        
+            
+            <p>Full Name: {{ fullName }}</p>
+        
+            
+            <form @submit.prevent="validateForm">
+              <input type="number" v-model="state.age" placeholder="Введите ваш возраст" />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        
+
+  
+  <script src="app.js"></script>
+
+</body>
+</html>
