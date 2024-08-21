@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ReactiveExample from './ReactiveExample.vue';
+import ReactiveExample from './components/ReactiveExample.vue';
 
 
 export default {
